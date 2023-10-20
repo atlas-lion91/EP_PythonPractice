@@ -1,0 +1,32 @@
+# 1. Write a python function to accept a string and count the number of vowels and consonants.
+# Example:
+vowel_counter("Hello World")
+# The number of vowels is 3
+# The number of consonant is 7
+
+def vowel_counter(input_string):
+    # Initialize counters for vowels and consonants
+    vowel_count = 0
+    consonant_count = 0
+
+    # Define a set of vowels (both uppercase and lowercase)
+    vowels = set("AEIOUaeiou")
+
+    # Iterate through each character in the input string
+    for char in input_string:
+        # Check if the character is an alphabet (ignore spaces and punctuation)
+        if char.isalpha():
+            # Check if the character is a vowel
+            if char in vowels:
+                vowel_count += 1
+            else:
+                consonant_count += 1
+
+    # Print the results
+    print(f"The number of vowels is {vowel_count}")
+    print(f"The number of consonants is {consonant_count}")
+
+# Test the function with an example
+vowel_counter("Hello World")
+
+
